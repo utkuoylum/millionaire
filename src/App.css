@@ -1,0 +1,21 @@
+.app {
+  height: 100vh;
+  display: flex;
+  background: #020230;
+  color: white;
+}
+
+.main {
+  width: 75%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0), #020230), url("./bg.jpg") center;
+}
+.pyramid {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.moneyList {
+  list-style-type: none;
+}
