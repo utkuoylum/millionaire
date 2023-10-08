@@ -114,7 +114,7 @@ function App() {
         <>
           <div className="main">
             {stop ? (
-              <h1 className="endText">You earned: {earned}</h1>
+              <h1 className="endText">{username} earned: {earned}</h1>
             ) : (
               <>
                 {" "}
