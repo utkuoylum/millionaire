@@ -57,27 +57,292 @@ function App() {
     },
     {
       id: 3,
-      question: "Who played the character of harry potter in movie?",
+      question: " Who sang the title song for the latest Bond film, No Time to Die?",
       answers: [
         {
-          text: "Johnny Deep",
+          text: "Adele",
           correct: false,
         },
         {
-          text: "Leonardo Di Caprio",
+          text: "Sam Smith",
           correct: false,
         },
         {
-          text: "Denzel Washington",
+          text: "Billie Ellish",
+          correct: true,
+        },
+        {
+          text: "Beyonce",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 4,
+      question: "Which city is home to the Brandenburg Gate?",
+      answers: [
+        {
+          text: "Vienna",
           correct: false,
         },
         {
-          text: "Daniel Red Cliff",
+          text: "Berlin",
+          correct: true,
+        },
+        {
+          text: "Washington",
+          correct: false,
+        },
+        {
+          text: "Zurich",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 5,
+      question: "If you were looking at Iguazu Falls, on what continent would you be?",
+      answers: [
+        {
+          text: "Asia",
+          correct: false,
+        },
+        {
+          text: "Africa",
+          correct: false,
+        },
+        {
+          text: "Europe",
+          correct: false,
+        },
+        {
+          text: "South America",
           correct: true,
         },
       ],
     },
-  ];
+    {
+      id: 6,
+      question: "What number was the Apollo mission that successfully put a man on the moon for the first time in human history?",
+      answers: [
+        {
+          text: "Apollo 11",
+          correct: true,
+        },
+        {
+          text: "Apollo 12",
+          correct: false,
+        },
+        {
+          text: "Apollo 13",
+          correct: false,
+        },
+        {
+          text: "Apollo 14",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 7,
+      question: "Which of the following languages has the longest alphabet?",
+      answers: [
+        {
+          text: "Greek",
+          correct: false,
+        },
+        {
+          text: "Russian",
+          correct: true,
+        },
+        {
+          text: "Arabic",
+          correct: false,
+        },
+        {
+          text: "German",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 8,
+      question: "What city hosted the 2002 Olympic Games?",
+      answers: [
+        {
+          text: "Tokyo",
+          correct: false,
+        },
+        {
+          text: "Beijing",
+          correct: false,
+        },
+        {
+          text: "Istanbul",
+          correct: false,
+        },
+        {
+          text: "Sydney",
+          correct: true,
+        },
+      ],
+    },
+    {
+      id: 9,
+      question: "How long did dinosaurs live on the earth?",
+      answers: [
+        {
+          text: "50-100 million years",
+          correct: false,
+        },
+        {
+          text: "100-150 million years",
+          correct: false,
+        },
+        {
+          text: "150-200 million years",
+          correct: true,
+        },
+        {
+          text: "200+ million years",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 10,
+      question: "Where was tea invented?",
+      answers: [
+        {
+          text: "China",
+          correct: true,
+        },
+        {
+          text: "Turkey",
+          correct: false,
+        },
+        {
+          text: "England",
+          correct: false,
+        },
+        {
+          text: "Denmark",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 11,
+      question: "Where was the earliest documented case of the Spanish flu?",
+      answers: [
+        {
+          text: "USA",
+          correct: true,
+        },
+        {
+          text: "Spain",
+          correct: false,
+        },
+        {
+          text: "Mexico",
+          correct: false,
+        },
+        {
+          text: "Gana",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 12,
+      question: "Arnold Schwarzenegger was married to a member of what famous US political family?",
+      answers: [
+        {
+          text: "The Kennedys",
+          correct: true,
+        },
+        {
+          text: "The Bushes",
+          correct: false,
+        },
+        {
+          text: "The Rockefellers",
+          correct: false,
+        },
+        {
+          text: "The Obamas",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 13,
+      question: "Which Game of Thrones character is known as the Young Wolf?",
+      answers: [
+        {
+          text: "Arya Stark",
+          correct: false,
+        },
+        {
+          text: "Robb Stark",
+          correct: true,
+        },
+        {
+          text: "Sansa Stark",
+          correct: false,
+        },
+        {
+          text: "Eddard Stark ",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 14,
+      question: "Which horoscope sign is a fish?",
+      answers: [
+        {
+          text: "Aquarius",
+          correct: false,
+        },
+        {
+          text: "Cancer",
+          correct: false,
+        },
+        {
+          text: "Pisces",
+          correct: true,
+        },
+        {
+          text: "Libra",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 15,
+      question: "What is the largest US state (by landmass)?",
+      answers: [
+        {
+          text: "Texas",
+          correct: false,
+        },
+        {
+          text: "Alaska",
+          correct: true,
+        },
+        {
+          text: "California",
+          correct: false,
+        },
+        {
+          text: "Nevada",
+          correct: false,
+        },
+      ],
+    },
+    
+      ];
 
   const moneyPyramid = useMemo(
     () =>
@@ -102,6 +367,9 @@ function App() {
   );
 
   useEffect(() => {
+    if(questionNumber === 15) {
+      setEarned("$ 1000000")
+    }
     questionNumber > 1 &&
       setEarned(
         moneyPyramid.find((money) => money.id === questionNumber - 1).amount

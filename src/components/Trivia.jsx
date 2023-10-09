@@ -39,6 +39,10 @@ setQuestion(data[questionNumber-1])
         delay(3000, () => setClassName(answer.correct ? "answer correct" : "answer wrong"));
         delay(5000, ()=> {
             if(answer.correct) {
+                if(questionNumber === 15) {
+                    delay(1000, ()=>setStop(true))
+                    
+                }
                 correctAnswer()
                 delay(1000, ()=> {
                     setQuestionNumber(prev => prev+1)
